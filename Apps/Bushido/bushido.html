@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bushido Final Responsive</title>
+    <style>
+        :root {
+            --neon-red: #ff3131;
+            --dark-bg: #0a0a0b;
+            --card-bg: #16161a;
+            --gold: #d4af37;
+            --text-gray: #e0e0e0;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--neon-red);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            letter-spacing: 5px;
+            text-shadow: 0 0 15px var(--neon-red);
+            font-size: 1.8rem;
+            margin: 10px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+            }
+            h1 { font-size: 2.5rem; letter-spacing: 8px; }
+        }
+
+        .card {
+            background-color: transparent;
+            width: 100%;
+            height: 150px;
+            perspective: 1000px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .card { height: 180px; }
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner, .card:active .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 49, 49, 0.2);
+            padding: 10px;
+        }
+
+        .card-front {
+            background-color: var(--card-bg);
+            color: var(--gold);
+            border-left: 4px solid var(--gold);
+        }
+
+        .card-front h2 { font-size: 1rem; margin: 0; }
+        @media (min-width: 768px) { .card-front h2 { font-size: 1.5rem; } }
+
+        .card-back {
+            background-color: #1a1a20;
+            color: var(--text-gray);
+            transform: rotateY(180deg);
+            border-left: 4px solid var(--neon-red);
+            font-size: 0.75rem;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) { .card-back { font-size: 0.9rem; line-height: 1.4; } }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(20px, 9999px, 10px, 0); transform: translate(-2px, -2px); }
+            50% { clip: rect(10px, 9999px, 90px, 0); transform: translate(2px, -2px); }
+            100% { clip: rect(0, 0, 0, 0); transform: translate(0); }
+        }
+
+        .glitch-active .card-inner {
+            animation: glitch-anim 0.3s infinite;
+            text-shadow: 1px 0 #ff00c1, -1px 0 #00fff9;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .samurai-status {
+            opacity: 0.6;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-size: 0.75rem;
+        }
+
+        .quote-box {
+            border: 2px dashed var(--neon-red);
+            padding: 10px 15px;
+            display: inline-block;
+            background: rgba(255, 49, 49, 0.05);
+            max-width: 95%;
+        }
+
+        .quote-text {
+            color: var(--neon-red);
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .dev-note {
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--text-gray);
+            opacity: 0.5;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        @media (min-width: 768px) {
+            .quote-text { font-size: 1.1rem; }
+            .samurai-status { font-size: 0.9rem; letter-spacing: 2px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BUSHIDO</h1>
+    </header>
+
+    <div class="grid">
+        <div class="card" onclick="triggerGlitch(this)">
+            <div class="card-inner">
+                <div class="card-front"><h2>義 - GI</h2></div>
+                <div class="card-back"><strong>JUSTICIA</strong>Sé honrado en tus tratos. Cree en tu propia justicia.</div>
+            </div>
+        </div>
+        <div class="card" onclick="triggerGlitch(this)">
+            <div class="card-inner">
+                <div class="card-front"><h2>勇 - YU</h2></div>
+                <div class="card-back"><strong>CORAJE</strong>Reemplaza el miedo por respeto y precaución.</div>
+            </div>
+        </div>
+        <div class="card" onclick="triggerGlitch(this)">
+            <div class="card-inner">
+                <div class="card-front"><h2>仁 - JIN</h2></div>
+                <div class="card-back"><strong>COMPASIÓN</strong>Ayuda a tus compañeros en cada oportunidad.</div>
+            </div>
+        </div>
+        <div class="card" onclick="triggerGlitch(this)">
+            <div class="card-inner">
+                <div class="card-front"><h2>礼 - REI</h2></div>
+                <div class="card-back"><strong>CORTESÍA</strong>La cortesía es la prueba de tu fuerza interna.</div>
+            </div>
+        </div>
+        <div class="card" onclick="triggerGlitch(this)">
+            <div class="card-inner">
+                <div class="card-front"><h2>誠 - MAKOTO</h2></div>
+                <div class="card-back"><strong>SINCERIDAD</strong>Hablar y hacer son la misma acción.</div>
+            </div>
+        </div>
+        <div class="card" onclick="triggerGlitch(this)">
+            <div class="card-inner">
+                <div class="card-front"><h2>名 - MEIYO</h2></div>
+                <div class="card-back"><strong>HONOR</strong>Tus decisiones son el reflejo de quién eres.</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="samurai-status">MIS VALORES SON LOS DE UN SAMURÁI</div>
+        <div class="quote-box">
+            <p class="quote-text">"El guerrero descansa para ganar la guerra."</p>
+        </div>
+        <div class="dev-note">Para el desarrollador que eligió no rendirse.</div>
+    </footer>
+
+    <script>
+        function triggerGlitch(card) {
+            card.classList.add('glitch-active');
+            setTimeout(() => {
+                card.classList.remove('glitch-active');
+            }, 400);
+        }
+    </script>
+
+</body>
+</html>
