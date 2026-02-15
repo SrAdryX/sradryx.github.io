@@ -1,0 +1,267 @@
+<!DOCTYPE html> <!-- Declaración de documento HTML5 -->
+<html lang="es"> <!-- Idioma principal del documento -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Escalado correcto en móviles -->
+    <title>Adrián Durán Guillén | Portfolio</title> <!-- Título de la pestaña del navegador -->
+    
+    <link rel="icon" type="image/png" href="Imagenes/favicon.png"> <!-- Favicon del sitio -->
+    
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="Estilos/general.css">
+    <!-- Librería de iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegación principal -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- Logo del portfolio -->
+            <img src="Imagenes/SrAdryX_Logo.png" alt="Logo SrAdryX" class="logo-img">
+        </div>
+
+        <!-- Contenedor del menú y redes sociales -->
+        <div class="nav-links" id="nav-menu">
+            <div class="menu-capsula">
+                <!-- Enlaces de navegación interna (scroll a secciones) -->
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+            </div>
+            
+            <!-- Iconos de redes sociales -->
+            <div class="social-group">
+                <a href="https://github.com/SrAdryX" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/adrián-durán-guillén-569aa320a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:adrianduran2000@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <!-- Botón de menú para vista móvil -->
+        <div class="menu-toggle" id="menumovil">☰</div>
+    </nav>
+
+    <!-- Sección de cabecera / presentación -->
+    <header id="inicio" class="header">
+        <div class="banner">
+            <!-- Texto de saludo -->
+            <p class="saludo">Hola, soy</p>
+            <!-- Nombre principal -->
+            <h1>ADRIÁN DURÁN GUILLÉN</h1>
+            
+            <!-- Handle / nick visual -->
+            <div class="dev-handle">
+                <span class="simbolo">@</span><span class="nick">SrAdryX</span>
+            </div>
+            
+            <!-- Línea decorativa animada bajo el nombre -->
+            <div class="linea-animada"></div>
+            
+            <!-- Roles profesionales -->
+            <p class="role">
+                <span>IT</span> 
+                <span class="separador">|</span> 
+                <span>FULL STACK DEVELOPER</span> 
+                <span class="separador">|</span> 
+                <span>CONTENT CREATOR</span>
+            </p>
+
+            <!-- Indicador visual para invitar a hacer scroll -->
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main class="contenedor">
+
+        <!-- Sección de habilidades -->
+        <section id="skills" class="section">
+            <!-- Título de la sección -->
+            <h2 class="tituloseccion">Mis <span class="destacado-rojo">Skills</span></h2>
+            
+            <!-- Texto introductorio de la sección -->
+            <div class="intro-text">
+                <p>Apasionado por la tecnología en todas sus capas, mi trayectoria combina el <strong>desarrollo de software</strong> con la infraestructura de <strong>sistemas microinformáticos y redes</strong>.</p>
+            </div>
+            <!-- Grid de tarjetas de skills -->
+            <div class="skills-grid-modern">
+
+                <!-- Tarjeta: Desarrollo & Software -->
+                <div class="skill-card-modern">
+                    <!-- Icono representativo de la categoría -->
+                    <div class="icon-box red"><i class="fas fa-code"></i></div>
+                    <h3>Desarrollo & Software</h3>
+                    <p>Especialista en desarrollo web y videojuegos con enfoque autodidacta y conocimientos avanzados en programación.</p>
+                    <!-- Lista de tecnologías relacionadas -->
+                    <div class="tags-container">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+                        <span>C# (Unity)</span><span>Python</span><span>MySQL</span><span>Bootstrap</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta: Sistemas & IT -->
+                <div class="skill-card-modern">
+                    <div class="icon-box blue"><i class="fas fa-server"></i></div>
+                    <h3>Sistemas & IT</h3>
+                    <p>Técnico en sistemas microinformáticos y redes con experiencia en mantenimiento de equipos, instalación de software y soporte remoto.</p>
+                    <div class="tags-container">
+                        <span>Hardware</span><span>Soporte Remoto</span><span>Reparación</span>
+                        <span>Redes</span><span>Arduino</span><span>Instalación Software</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta: Diseño & Media -->
+                <div class="skill-card-modern">
+                    <div class="icon-box orange"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Diseño & Media</h3>
+                    <p>Creador de contenido visual. Experto en edición de vídeo y diseño de cartelería.</p>
+                    <div class="tags-container">
+                        <span>Edición Video</span><span>Audio</span><span>Logos</span>
+                        <span>Cartelería</span><span>WordPress</span><span>Moodle</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta: Perfil & Educación -->
+                <div class="skill-card-modern">
+                    <div class="icon-box green"><i class="fas fa-user-check"></i></div>
+                    <h3>Perfil & Educación</h3>
+                    <p>Titulado en Sistemas Microinformáticos y Redes, Nivel de Inglés B1 y gran capacidad de aprendizaje.</p>
+                    <div class="tags-container">
+                        <span>Office</span><span>B1 English</span><span>Autodidacta</span>
+                        <span>Trabajo en Equipo</span><span>Carnet B</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de proyectos -->
+        <section id="proyectos" class="section">
+            <!-- Título de la sección -->
+            <h2 class="section-title">Mis <span class="destacado-rojo">Proyectos</span></h2>
+            
+            <!-- Descripción general de los proyectos -->
+            <div class="intro-text">
+                <p>Explora mi <strong>ecosistema de desarrollo</strong>: una recopilación de soluciones técnicas que abarcan desde el desarrollo web corporativo hasta la automatización con Python.</p>
+            </div>
+
+            <!-- Contenedor de tarjetas de proyectos (tipo carrusel / grid) -->
+            <div class="projects-carousel">
+                
+                <!-- Proyecto: ARN VTC -->
+                <div class="project-card-v2">
+                    <!-- Cabecera visual tipo ventana (puntos de colores) -->
+                    <div class="card-ui-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-info">
+                            <!-- Etiqueta de tipo de proyecto -->
+                            <span class="badge">Web Gaming</span>
+                            <h3>ARN VTC</h3>
+                            <p>Plataforma oficial de una comunidad gaming dedicada a la simulación.</p>
+                            <!-- Enlace al proyecto -->
+                            <a href="https://arnvtc.x10.bz/" target="_blank" class="btn-minimal">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto: Durán Instalaciones -->
+                <div class="project-card-v2">
+                    <div class="card-ui-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-info">
+                            <span class="badge">Web Reformas</span>
+                            <h3>Durán Instalaciones</h3>
+                            <p>Web profesional de reformas enfocada en catálogo de proyectos y captación de clientes.</p>
+                            <a href="http://duraninstalaciones.es/" target="_blank" class="btn-minimal">Ver Sitio Web</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto: GeneQR -->
+                <div class="project-card-v2">
+                    <div class="card-ui-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-info">
+                            <span class="badge">Python Tool</span>
+                            <h3>GeneQR</h3>
+                            <p>Generador de códigos QR personalizados con librerías avanzadas.</p>
+                            <a href="https://github.com/SrAdryX/GeneQR" target="_blank" class="btn-minimal">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto: Pegaso BOT -->
+                <div class="project-card-v2">
+                    <div class="card-ui-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-info">
+                            <span class="badge">Discord Bot</span>
+                            <h3>Pegaso BOT</h3>
+                            <p>Automatización de administración y sistemas de entretenimiento para Discord.</p>
+                            <!-- Etiqueta indicando que es un proyecto privado -->
+                            <span class="private-tag"><i class="fas fa-lock"></i> Privado</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footercontenedor">
+            <!-- Columna: branding y descripción corta -->
+            <div class="footercontenido">
+                <h3 class="footerlogo"><span class="srenfooter">Sr</span>AdryX</h3>
+                <p>IT, Full Stack Developer & Content Creator</p>
+            </div>
+            
+            <!-- Columna: navegación rápida -->
+            <div class="footercontenido">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                </ul>
+            </div>
+            
+            <!-- Columna: enlaces de contacto y redes -->
+            <div class="footercontenido">
+                <h4>Contacto & Redes</h4>
+                <div class="redessociales">
+                    <a href="https://github.com/SrAdryX" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/adrián-durán-guillén-569aa320a" target="_blank">LinkedIn</a>
+                    <a href="mailto:adrianduran2000@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea de copyright -->
+        <div class="footercopy">
+            <p id="copy"></p>
+        </div>
+    </footer>
+
+    <!-- Scripts de funcionalidad general y observador de scroll/animaciones -->
+    <script src="Scripts/General.js"></script>
+    <script src="Scripts/observador.js"></script>
+
+</body>
+</html>
