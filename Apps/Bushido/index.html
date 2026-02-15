@@ -7,8 +7,10 @@
     <style>
         :root {
             --neon-red: #ff3131;
-            --dark-bg: #0a0a0b;
-            --card-bg: #16161a;
+            /* Color exacto de Notion Dark Mode */
+            --notion-bg: #191919; 
+            /* Color de las tarjetas un poco más claro para contraste */
+            --card-bg: #202020;
             --gold: #d4af37;
             --text-gray: #e0e0e0;
         }
@@ -16,7 +18,7 @@
         * { box-sizing: border-box; }
 
         body {
-            background-color: var(--dark-bg);
+            background-color: var(--notion-bg);
             color: white;
             font-family: 'Segoe UI', system-ui, sans-serif;
             display: flex;
@@ -108,7 +110,7 @@
         @media (min-width: 768px) { .card-front h2 { font-size: 1.5rem; } }
 
         .card-back {
-            background-color: #1a1a20;
+            background-color: #252525;
             color: var(--text-gray);
             transform: rotateY(180deg);
             border-left: 4px solid var(--neon-red);
@@ -182,37 +184,37 @@
         <div class="card" onclick="triggerGlitch(this)">
             <div class="card-inner">
                 <div class="card-front"><h2>義 - GI</h2></div>
-                <div class="card-back"><strong>JUSTICIA</strong>Sé honrado en tus tratos. Cree en tu propia justicia.</div>
+                <div class="card-back"><strong>JUSTICIA</strong><br>Sé honrado en tus tratos. Cree en tu propia justicia.</div>
             </div>
         </div>
         <div class="card" onclick="triggerGlitch(this)">
             <div class="card-inner">
                 <div class="card-front"><h2>勇 - YU</h2></div>
-                <div class="card-back"><strong>CORAJE</strong>Reemplaza el miedo por respeto y precaución.</div>
+                <div class="card-back"><strong>CORAJE</strong><br>Reemplaza el miedo por respeto y precaución.</div>
             </div>
         </div>
         <div class="card" onclick="triggerGlitch(this)">
             <div class="card-inner">
                 <div class="card-front"><h2>仁 - JIN</h2></div>
-                <div class="card-back"><strong>COMPASIÓN</strong>Ayuda a tus compañeros en cada oportunidad.</div>
+                <div class="card-back"><strong>COMPASIÓN</strong><br>Ayuda a tus compañeros en cada oportunidad.</div>
             </div>
         </div>
         <div class="card" onclick="triggerGlitch(this)">
             <div class="card-inner">
                 <div class="card-front"><h2>礼 - REI</h2></div>
-                <div class="card-back"><strong>CORTESÍA</strong>La cortesía es la prueba de tu fuerza interna.</div>
+                <div class="card-back"><strong>CORTESÍA</strong><br>La cortesía es la prueba de tu fuerza interna.</div>
             </div>
         </div>
         <div class="card" onclick="triggerGlitch(this)">
             <div class="card-inner">
                 <div class="card-front"><h2>誠 - MAKOTO</h2></div>
-                <div class="card-back"><strong>SINCERIDAD</strong>Hablar y hacer son la misma acción.</div>
+                <div class="card-back"><strong>SINCERIDAD</strong><br>Hablar y hacer son la misma acción.</div>
             </div>
         </div>
         <div class="card" onclick="triggerGlitch(this)">
             <div class="card-inner">
                 <div class="card-front"><h2>名 - MEIYO</h2></div>
-                <div class="card-back"><strong>HONOR</strong>Tus decisiones son el reflejo de quién eres.</div>
+                <div class="card-back"><strong>HONOR</strong><br>Tus decisiones son el reflejo de quién eres.</div>
             </div>
         </div>
     </div>
