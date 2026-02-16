@@ -269,6 +269,40 @@ header.header {
 .tituloseccion{
   margin-top: 25px;
 }
+/* --- ESTILOS DEL CONTADOR BENTO --- */
+.counter-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0 40px 0;
+}
+
+.experience-bento {
+    text-align: center;
+    padding: 30px 60px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    min-width: 220px;
+}
+
+#years-counter {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin: 0;
+}
+
+.experience-bento p {
+    margin: 10px 0 0 0;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 600;
+}
 /*PROYECTOS*/
 .projects-carousel {
     display: flex;
@@ -376,34 +410,6 @@ header.header {
 }
 
 .btn-minimal:hover { color: var(--accent); }
-
-/* --- RESPONSIVE PROYECTOS --- */
-@media (max-width: 992px) {
-    .projects-carousel { 
-        height: auto; 
-        flex-direction: column; 
-        perspective: none; 
-        gap: 20px;
-    }
-    .project-card-v2 {
-        position: relative; 
-        width: 95%; 
-        transform: none !important; 
-        margin: 0 auto;
-        filter: none !important; 
-        opacity: 1 !important;
-        visibility: visible !important;
-    }
-    /* En móvil ocultamos la lógica de 'hidden' para que se vean todas en lista */
-    .project-card-v2.hidden {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        pointer-events: all;
-        position: relative;
-    }
-}
 /*Estilos del Handle @SrAdryX*/
 .dev-handle {
   display: inline-flex;
@@ -588,9 +594,9 @@ header.header {
         color: var(--accent) !important;
     }
   .menu-capsula li a.selected {
-        background-color: transparent !important; /* Quitamos el fondo rojo */
-        color: var(--accent) !important;        /* Ponemos el texto en rojo */
-        font-weight: bold;                        /* Opcional: para que resalte un poco más */
+        background-color: transparent !important; 
+        color: var(--accent) !important;        
+        font-weight: bold;                        
     }
   .social-group {
     margin-left: 0;
@@ -605,6 +611,33 @@ header.header {
   .menu-toggle {
     display: block; 
   }
+  /* --- RESPONSIVE PROYECTOS --- */
+@media (max-width: 992px) {
+    .projects-carousel { 
+        height: auto; 
+        flex-direction: column; 
+        perspective: none; 
+        gap: 20px;
+    }
+    .project-card-v2 {
+        position: relative; 
+        width: 95%; 
+        transform: none !important; 
+        margin: 0 auto;
+        filter: none !important; 
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    /* En móvil ocultamos la lógica de 'hidden' para que se vean todas en lista */
+    .project-card-v2.hidden {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: all;
+        position: relative;
+    }
+}
   .projects-carousel { 
     height: auto; 
     flex-direction: column; 

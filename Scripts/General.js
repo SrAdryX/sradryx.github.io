@@ -124,4 +124,40 @@ proyects.forEach((card, i) => {
 });
 // Inicializar
 renderCarousel();
+// --- CONTADOR DE EXPERIENCIA AUTOMÁTICO ---
+    const counterElement = document.getElementById("years-counter");
+    
+    if (counterElement) {
+        const startYear = 2013;
+        const currentYear = new Date().getFullYear();
+        const totalYears = currentYear - startYear;
+
+        const startCounter = () => {
+            let currentCount = 0;
+            const speed = 70; // Velocidad del conteo en ms
+
+            const updateCounter = () => {
+                if (currentCount < totalYears) {
+                    currentCount++;
+                    counterElement.innerText = currentCount;
+                    setTimeout(updateCounter, speed);
+                } else {
+                    counterElement.innerText = totalYears;
+                }
+            };
+            updateCounter();
+        };
+
+        // Usamos Intersection Observer para que se active al verlo
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter();
+                    counterObserver.unobserve(entry.target); // Solo se anima una vez
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counterObserver.observe(counterElement);
+    }
 });
