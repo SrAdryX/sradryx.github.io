@@ -606,10 +606,17 @@ header.header {
     display: block; 
   }
   .projects-carousel { 
-    height: auto; flex-direction: column; perspective: none; 
+    height: auto; 
+    flex-direction: column; 
+    perspective: none; 
   }
   .project-card-v2 {
-     position: relative; width: 95%; transform: none !important; margin-bottom: 15px; filter: none !important; 
+     position: relative; 
+     width: 95%; 
+     height: auto;
+     transform: none !important; 
+     margin-bottom: 15px; 
+     filter: none !important; 
     }
   .footer {
         padding: 40px 5% 20px 5%; /* Reducimos un poco el padding superior */
